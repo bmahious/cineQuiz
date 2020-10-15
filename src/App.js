@@ -1,16 +1,29 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Landing from './components/Landing/Landing';
 import Footer from './components/Footer/Footer';
+import Welcom from './components/Welcom/Welcom';
+import Login from './components/Login/Login';
+import SigUp from './components/SignUP/SigUp'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 function App() {
   return (
-    <div >
-     <Header />
-     <Landing />
-     <Footer />
-    </div>
+    <Router >
+
+      <Header />
+      <Switch>
+        <Route exact path='/' component={Landing} />
+        <Route path='/welcom' component={Welcom} />
+        <Route path='/login' component={Login} />
+        <Route path='/signup' component={SigUp} />
+        <Route component={ErrorPage} />
+      </Switch>
+      <Footer />
+
+    </Router>
   );
 }
 

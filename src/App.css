@@ -1,4 +1,11 @@
 /** Project coded by Donkey Geek. https://www.youtube.com/c/DonkeyGeek **
+ ╔═══╗ ╔═══╗ ╔═╗ ╔╗ ╔╗╔═╗ ╔═══╗ ╔╗  ╔╗ ──── ╔═══╗ ╔═══╗ ╔═══╗ ╔╗╔═╗
+ ╚╗╔╗║ ║╔═╗║ ║ ╚╗║║ ║║║╔╝ ║╔══╝ ║╚╗╔╝║ ──── ║╔═╗║ ║╔══╝ ║╔══╝ ║║║╔╝
+  ║║║║ ║║ ║║ ║╔╗╚╝║ ║╚╝╝  ║╚══╗ ╚╗╚╝╔╝ ──── ║║ ╚╝ ║╚══╗ ║╚══╗ ║╚╝╝
+  ║║║║ ║║ ║║ ║║╚╗ ║ ║╔╗║  ║╔══╝  ╚╗╔╝ ───── ║║╔═╗ ║╔══╝ ║╔══╝ ║╔╗║
+ ╔╝╚╝║ ║╚═╝║ ║║ ║ ║ ║║║╚╗ ║╚══╗   ║║ ────── ║╚╩═║ ║╚══╗ ║╚══╗ ║║║╚╗
+ ╚═══╝ ╚═══╝ ╚╝ ╚═╝ ╚╝╚═╝ ╚═══╝   ╚╝ ────── ╚═══╝ ╚═══╝ ╚═══╝ ╚╝╚═╝
+************************************************************************/
 
 /* :ROOT * H1 H2 H3 */
 /* BODY */
@@ -46,11 +53,10 @@ h1 {
   font-size: 70px;
   color: var(--white-color);
   font-weight: normal;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 6px;
   cursor: pointer;
   margin: 0 auto;
-  float: left;
 }
 
 h1 a {
@@ -73,8 +79,7 @@ h3 {
 body {
   margin: 0;
   padding: 0;
-  background-image: url(images/cinema.jpg);
-  /* background-image: url(images/bg-noise-texture.png); */
+  background-image: url(images/bg-noise-texture.png);
   background-repeat: repeat;
   height: 100vh;
   display: flex;
@@ -92,13 +97,12 @@ hr {
 /* HEADER */
 header {
   display: flex;
+  justify-content: center;
 }
 
 .banner-container {
   padding: 20px 0;
   flex-basis: 80%;
-  display: flex;
-  
 }
 /* END HEADER */
 
@@ -111,10 +115,9 @@ main {
 /* WELCOME PAGE */
 .welcomePage {
   background-color: var(--red-color);
-  background-image: url(images/space.jpg);
+  background-image: url(images/wolverine.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   display: flex;
   justify-content: space-between;
   height: 500px;
@@ -132,7 +135,7 @@ main {
   background-image: url(images/wolverine.png), url(images/griffes-droit.png);
 }
 
-/* .leftBox {
+.leftBox {
   display: flex;
   flex: 0 1 35%;
   align-items: flex-start;
@@ -143,74 +146,25 @@ main {
   display: flex;
   flex: 0 1 35%;
   align-items: flex-start;
-} */
-
-.btn-welcomeOne {
-  border: 2px solid var(--white-color);
-  color: var(--white-color);
-  /* padding: 12px 25px; */
-  /* border-radius: 5px; */
-  background-color: transparent; 
-  
-  text-decoration: none;
-  /* margin-top: 150px; */
-  width: 165px;
-  width: auto;
-  height: 40px;
-  margin-top: 15px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 49px 35px;
-  font-size: 13px;
-  background-color: #6A0B0B, transparent;
-  text-transform: uppercase;
-  
-  font-weight: bolder;
-  border: 1px solid var(--white-color);;
-  cursor: pointer;
-  outline: none;
-}
-.btn-welcomeTwo {
-  border: 2px solid var(--white-color);
-  color: var(--white-color);
-  /* padding: 12px 25px; */
-  /* border-radius: 5px; */
-  background-color: transparent; 
-  text-decoration: none;
-  /* margin-top: 150px; */
-  width: 165px;
-  width: auto;
-  height: 40px;
-  margin-top: 15px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 49px 35px;
-  font-size: 13px;
-  background-color: #6A0B0B, transparent;
-  text-transform: uppercase;
-  font-weight: bolder;
-  border: 1px solid var(--white-color);;
-  cursor: pointer;
-  outline: none;
-  margin-left: 20%;
 }
 
-.btn-welcomeOne:hover {
+.btn-welcome {
   border: 2px solid var(--white-color);
-  background-color: var(--white-color);
-  color: black;
-  border: 1px solid black;
+  color: var(--white-color);
+  padding: 12px 25px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: normal;
+  font-size: 19px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 150px;
 }
-.btn-welcomeTwo:hover {
+
+.btn-welcome:hover {
   border: 2px solid var(--white-color);
+  color: var(--red-color);
   background-color: var(--white-color);
-  color: black;
-  border: 1px solid black;
-}
-.btn-container{
-  display: flex;
-  justify-content: space-between;
-  
 }
 /* END WELCOME PAGE */
 
@@ -306,6 +260,7 @@ footer {
 
 .formBoxRight {
   flex: 0 1 50%;
+  /* border: 2px solid var(--white-color); */
 }
 
 .formBoxRight span {
@@ -873,24 +828,11 @@ input:checked+.slider:before {
 }
 
 @media all and (max-width: 850px) {
-  .welcomePageTwo {
+  .welcomePage {
     background-image: none;
     flex-direction: column;
     height: 300px;
     justify-content: center;
-  }
-  .btn-welcomeTwo{
-    margin-left: 0;
-  }
-  .welcomePageOne {
-    background-image: none;
-    flex-direction: column;
-    height: 300px;
-    justify-content: center;
-  }
-  .btn-container{
-  
-    flex-direction: column;
   }
 
   .leftBox {
