@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect, Fragment} from 'react';
+import './Landing.css';
 
 import { Link } from 'react-router-dom';
 
@@ -10,14 +11,16 @@ const Landing = () => {
     console.log(btn)
     const refWolverine = useRef(null);
 
-    useEffect(() => {
-        refWolverine.current.classList.add('startingImg');
-        setTimeout(() => {
-            refWolverine.current.classList.remove('startingImg');
-            setBtn(true)
-        });
-    }, []);
+    // useEffect(() => {
+    //     refWolverine.current.classList.add('startingImg');
+    //     setTimeout(() => {
+    //         refWolverine.current.classList.remove('startingImg');
+    //         setBtn(true)
+    //     });
+    // }, []);
 
+
+    // Gestions des classes sur les griffes de Wolverin
     const selfLeftImg = () => {
         refWolverine.current.classList.add('leftImg');
     }
@@ -43,9 +46,20 @@ const Landing = () => {
         </Fragment>
     )
     return (
-        <main ref={refWolverine} className="welcomePage">
-            {displyBtn}
-        </main>
+        // il faut faire un ref={refWolverine}  sur main
+        <Fragment>
+            <div className="welcomePage">
+                <div className="imageLeftCin"></div>
+                <div className="imageRightCin"></div>
+                {/* {displyBtn} */}
+            </div>
+            <div className="welcomePage">
+                <div className="welcomePageTwo"> <p className="welcomePageText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br></br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an<br></br> unknown printer took a galley of type and scrambled it to make a type specimen book.</p> </div>
+                {/* {displyBtn} */}
+            </div>
+        </Fragment>
+        
+        
     )
 }
 

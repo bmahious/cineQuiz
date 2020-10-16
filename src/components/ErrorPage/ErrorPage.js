@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './ErrorPage.css';
 import batman from '../../images/batman.png';
 import './ErrorPage.css';
 

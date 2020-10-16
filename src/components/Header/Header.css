@@ -1,0 +1,90 @@
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #212429;
+  background: linear-gradient(to bottom right, black, white);
+}
+
+.banner-container {
+  padding: 30px 0;
+ width: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid white; */
+  
+}
+.headerTitle {
+  font-family: 'Bangers', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  font-weight: normal;
+  /* text-align: center; */
+  cursor: pointer;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* END HEADER */
+
+
+/* .header {
+font-family: 'Open Sans', 'Arial', sans-serif;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 50;
+background-color: #212429;
+} */
+/* .body{
+background-color: #16191c;
+  color: #fff;
+  min-height: 60vh;
+} */
+.frag {
+display: flex;
+width: 20vw;
+/* max-height: 10%; */
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.btn-welcome {
+font-family: 'Abel', sans-serif;
+border: 0.1px solid white;
+color: #000;
+padding: 3px 25px;
+border-radius: 5px;
+background-color: transparent;
+font-size: 16px;
+text-align: center;
+text-decoration: none;
+}
+
+.btn-welcome:hover {
+color: white;
+font-weight: bold;
+background-color: #981818;
+background-color: #000;
+
+}
+
+/* .leftBox {
+display: flex;
+flex: 0 1 35%;
+align-items: flex-start;
+justify-content: flex-end;
+}
+
+.rightBox {
+display: flex;
+flex: 0 1 35%;
+align-items: flex-start;
+} */

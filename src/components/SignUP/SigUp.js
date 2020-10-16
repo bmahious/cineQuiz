@@ -1,6 +1,8 @@
 import React, {useState, useContext} from 'react';
 import { FirebaseContext } from './../Firebase/Index';
 import { Link } from 'react-router-dom';
+import './SigUp.css';
+
 
 const SigUp = (props) => {
         console.log(props)

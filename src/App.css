@@ -1,31 +1,4 @@
-/** Project coded by Donkey Geek. https://www.youtube.com/c/DonkeyGeek **
- ╔═══╗ ╔═══╗ ╔═╗ ╔╗ ╔╗╔═╗ ╔═══╗ ╔╗  ╔╗ ──── ╔═══╗ ╔═══╗ ╔═══╗ ╔╗╔═╗
- ╚╗╔╗║ ║╔═╗║ ║ ╚╗║║ ║║║╔╝ ║╔══╝ ║╚╗╔╝║ ──── ║╔═╗║ ║╔══╝ ║╔══╝ ║║║╔╝
-  ║║║║ ║║ ║║ ║╔╗╚╝║ ║╚╝╝  ║╚══╗ ╚╗╚╝╔╝ ──── ║║ ╚╝ ║╚══╗ ║╚══╗ ║╚╝╝
-  ║║║║ ║║ ║║ ║║╚╗ ║ ║╔╗║  ║╔══╝  ╚╗╔╝ ───── ║║╔═╗ ║╔══╝ ║╔══╝ ║╔╗║
- ╔╝╚╝║ ║╚═╝║ ║║ ║ ║ ║║║╚╗ ║╚══╗   ║║ ────── ║╚╩═║ ║╚══╗ ║╚══╗ ║║║╚╗
- ╚═══╝ ╚═══╝ ╚╝ ╚═╝ ╚╝╚═╝ ╚═══╝   ╚╝ ────── ╚═══╝ ╚═══╝ ╚═══╝ ╚╝╚═╝
-************************************************************************/
 
-/* :ROOT * H1 H2 H3 */
-/* BODY */
-/* HR */
-/* HEADER */
-/* MAIN */
-/* WELCOME PAGE */
-/* TOASTIFY COLOR */
-/* FOOTER */
-/* ERROR PAGE */
-/* SIGNUP - LOGIN - FORGETPASSWORD */
-/* LOADER */
-/* LOGOUT SWITCH */
-/* LEVELS */
-/* PROGRESS BAR */
-/* ANSWER OPTIONS*/
-/* QUIZOVER */
-/* SUBMIT BUTTON */
-/* MODAL */
-/* MEDIA QUERIES */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Anton|Bangers|Carter+One&display=swap');
@@ -47,7 +20,7 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
-
+/* 
 h1 {
   font-family: 'Bangers', cursive;
   font-size: 70px;
@@ -57,7 +30,7 @@ h1 {
   letter-spacing: 6px;
   cursor: pointer;
   margin: 0 auto;
-}
+} */
 
 h1 a {
   color: inherit;
@@ -95,15 +68,7 @@ hr {
 }
 
 /* HEADER */
-header {
-  display: flex;
-  justify-content: center;
-}
 
-.banner-container {
-  padding: 20px 0;
-  flex-basis: 80%;
-}
 /* END HEADER */
 
 /* MAIN */
@@ -113,59 +78,7 @@ main {
 /* END MAIN */
 
 /* WELCOME PAGE */
-.welcomePage {
-  background-color: var(--red-color);
-  background-image: url(images/wolverine.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: flex;
-  justify-content: space-between;
-  height: 500px;
-}
-
-.startingImg {
-  background-image: url(images/xmen.png);
-}
-
-.leftImg {
-  background-image: url(images/wolverine.png), url(images/griffes-gauche.png);
-}
-
-.rightImg {
-  background-image: url(images/wolverine.png), url(images/griffes-droit.png);
-}
-
-.leftBox {
-  display: flex;
-  flex: 0 1 35%;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.rightBox {
-  display: flex;
-  flex: 0 1 35%;
-  align-items: flex-start;
-}
-
-.btn-welcome {
-  border: 2px solid var(--white-color);
-  color: var(--white-color);
-  padding: 12px 25px;
-  border-radius: 5px;
-  background-color: transparent;
-  font-weight: normal;
-  font-size: 19px;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 150px;
-}
-
-.btn-welcome:hover {
-  border: 2px solid var(--white-color);
-  color: var(--red-color);
-  background-color: var(--white-color);
-}
+ /* déplacé */
 /* END WELCOME PAGE */
 
 /* TOASTIFY COLOR */
@@ -178,201 +91,14 @@ main {
 /* END TOASTIFY COLOR */
 
 /* FOOTER */
-footer {
-  display: flex;
-  justify-content: center;
-}
 
-.footer-container {
-  padding: 20px 0;
-  padding: 20px 0;
-  flex: 0 1 80%;
-}
-
-.footer-container p {
-  color: var(--white-color);
-  line-height: 19px;
-  margin: 10px 0;
-  padding: 0;
-  font-size: 12px;
-  font-weight: normal;
-  text-align: center;
-}
 
 /* ERROR PAGE */
-.quiz-bg {
-  margin: 0;
-  padding: 0;
-  background-color: var(--white-color);
-  display: flex;
-  justify-content: center;
-}
 
-.container {
-  background-color: var(--white-color);
-  padding: 30px;
-  flex: 0 1 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
 /* END ERROR PAGE */
 
 /* SIGNUP - LOGIN - FORGETPASSWORD */
-.signUpLoginBox {
-  background-image: url(images/bg-noise-texture.png);
-  background-repeat: repeat;
-  -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
-  -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
-  box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
-  display: flex;
-  justify-content: center;
-}
 
-.slContainer {
-  flex: 0 1 80%;
-  display: flex;
-}
-
-.formBoxLeftSignup {
-  min-height: 500px;
-  background-image: url(images/ironman.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex: 0 1 50%;
-}
-
-.formBoxLeftLogin {
-  min-height: 500px;
-  background-image: url(images/spiderman.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex: 0 1 50%;
-}
-
-.formBoxLeftForget {
-  min-height: 500px;
-  background-image: url(images/deadpool.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex: 0 1 50%;
-}
-
-.formBoxRight {
-  flex: 0 1 50%;
-  /* border: 2px solid var(--white-color); */
-}
-
-.formBoxRight span {
-  display: block;
-  color: var(--red-color);
-  text-align: center;
-  border: 1px solid var(--red-color);
-  padding: 10px;
-  margin: 15px 0;
-}
-
-.formContent {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.formContent h2 {
-  margin: 0 0 40px 0;
-  padding: 0;
-  color: var(--white-color);
-  text-transform: uppercase;
-}
-
-.formContent .inputBox {
-  position: relative;
-  height: 80px;
-}
-
-.formContent .inputBox input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 17px;
-  color: var(--red-color);
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 30px;
-  border: none;
-  background: transparent;
-  border-bottom: 1px solid var(--white-color);
-  outline: none;
-}
-
-.formContent .inputBox label {
-  color: var(--white-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 17px;
-  pointer-events: none;
-  -webkit-transition: 0.2s ease-in;
-  -moz-transition: 0.2s ease-in;
-  -o-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
-}
-
-.formContent .inputBox input:focus~label,
-.formContent .inputBox input:valid~label {
-  top: -30px;
-  left: 0;
-  color: var(--white-color);
-  font-size: 16px;
-  font-style: italic;
-}
-
-/* Form buttons */
-.formContent button {
-  margin-left: 0;
-  display: block;
-  margin: 0 auto 20px;
-  min-width: 150px;
-  background-color: transparent;
-  color: var(--white-color);
-  padding: 7px;
-  font-size: 15px;
-  border-radius: 5px;
-}
-
-.formContent button:hover {
-  background-color: var(--red-color);
-  color: var(--white-color);
-  cursor: pointer;
-}
-
-button:disabled,
-button[disabled],
-button:disabled:hover,
-button[disabled]:hover {
-  border: 1px solid var(--light-grey-color);
-  background-color: var(--light-grey-color);
-  color: var(--dark-grey-color);
-  opacity: 0.65;
-  cursor: not-allowed;
-}
-
-.linkContainer {
-  height: 50px;
-  margin-top: 35px;
-  padding-top: 15px;
-  border-top: 1px dashed var(--light-grey-color);
-}
-
-.simpleLink {
-  color: var(--white-color);
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.simpleLink:hover {
-  color: var(--red-color);
-}
 /* END SIGNUP - LOGIN - FORGETPASSWORD */
 
 /* LOADER */
@@ -414,66 +140,7 @@ button[disabled]:hover {
 /* END LOADER */
 
 /* LOGOUT SWITCH */
-.logoutContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 30px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--light-grey-color);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked+.slider {
-  background-color: var(--red-color);
-}
-
-input:checked+.slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
+/*  */
 /* END LOGOUT SWITCH */
 
 /* LEVELS */
@@ -827,33 +494,7 @@ input:checked+.slider:before {
   }
 }
 
-@media all and (max-width: 850px) {
-  .welcomePage {
-    background-image: none;
-    flex-direction: column;
-    height: 300px;
-    justify-content: center;
-  }
 
-  .leftBox {
-    display: flex;
-    flex: 0 1 40%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .rightBox {
-    display: flex;
-    flex: 0 1 40%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn-welcome {
-    margin-top: 0;
-    flex-basis: 300px;
-  }
-}
 
 @media screen and (max-width: 980px) {
   /* Change Modal elements */
@@ -889,3 +530,5 @@ input:checked+.slider:before {
   }
 
 }
+
+
