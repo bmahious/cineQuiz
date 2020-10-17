@@ -1,5 +1,5 @@
 .signUpLoginBox {
-    background-image: url(../../images/bg-noise-texture.png);
+    /* background-image: url(../../images/bg-noise-texture.png); */
     background-repeat: repeat;
     -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
     -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
@@ -23,7 +23,7 @@
   
   .formBoxLeftLogin {
     min-height: 500px;
-    background-image: url(../../images/spiderman.png);
+    /* background-image: url(../../images/spiderman.png); */
     background-repeat: no-repeat;
     background-position: center center;
     flex: 0 1 50%;
@@ -112,17 +112,19 @@
     display: block;
     margin: 0 auto 20px;
     min-width: 150px;
-    background-color: transparent;
+    background-color: #A70C0C;
     color: white;
     padding: 7px;
     font-size: 15px;
     border-radius: 5px;
+    outline: none;
   }
   
   .formContent button:hover {
-    background-color: red;
+    background-color: #EA1515;
     color: white;
     cursor: pointer;
+    outline: none;
   }
   
   button:disabled,
@@ -134,6 +136,7 @@
     color: grey;
     opacity: 0.65;
     cursor: not-allowed;
+    color: white;
   }
   
   .linkContainer {

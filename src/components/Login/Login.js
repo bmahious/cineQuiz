@@ -49,7 +49,7 @@ const Login = (props) => {
     return (
         <div className="signUpLoginBox">
             <div className="slContainer">
-                <div className="formBoxLeftLogin"></div>
+                {/* <div className="formBoxLeftLogin"></div> */}
                     <div className="formBoxRight">
                             <div className="formContent">
                                 {handleErrorMsg}
@@ -67,6 +67,8 @@ const Login = (props) => {
                                 </form>
                                 <div className="linkContainer">
                                     <Link className="simpleLink" to="/signup"> Nouveau sur Ciné Quiz ! Inscrivez-vous maintenant</Link>
+                                    <br />
+                                    <Link className="simpleLink" to="/forgetpassword"> Mot de passe oublié ? </Link>
                                 </div>
                             </div>
                     </div>

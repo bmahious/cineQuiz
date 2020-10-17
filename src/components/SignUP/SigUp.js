@@ -25,10 +25,16 @@ const SigUp = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const { email, password} = LoginData;
+        const { email, password, pseudo} = LoginData;
         firebaseContextProvid.SignUpUser(email, password)
+        .then((authUser) => {
+            firebaseContextProvid.user(authUser.user.uid).set({
+                pseudo,
+                email
+            })
+        })
         //HERE WE PUT BACK THE EMPTY STRING BY PASSING 'setLoginData' TO 'data', AFTER THE USER SIGNUP
-        .then( user => {
+        .then(user => {
             setLoginData({...data});
             props.history.push('/welcom');
         })
@@ -49,8 +55,8 @@ const SigUp = (props) => {
     return (
         <div className="SignUpLoginBox">
             <div className="slContainer ">
-                <div className="formBoxLeftSignup">
-                </div>
+                {/* <div className="formBoxLeftSignup">
+                </div> */}
                 <div className="formBoxRight">
                         <div className="formContent">
                             {ErrorMsg}

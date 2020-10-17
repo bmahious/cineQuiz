@@ -1,5 +1,5 @@
 .signUpLoginBox {
-    background-image: url(../../images/bg-noise-texture.png);
+    /* background-image: url(../../images/bg-noise-texture.png); */
     background-repeat: repeat;
     -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
     -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
@@ -8,14 +8,14 @@
     justify-content: center;
   }
   
-  .slContainer {
+  /* .slContainer {
     flex: 0 1 80%;
     display: flex;
-  }
+  } */
   
   .formBoxLeftSignup {
     min-height: 500px;
-    background-image: url(../../images/ironman.png);
+    /* background-image: url(../../images/ironman.png); */
     background-repeat: no-repeat;
     background-position: center center;
     flex: 0 1 50%;
@@ -23,7 +23,7 @@
   
   .formBoxLeftLogin {
     min-height: 500px;
-    background-image: url(../../images/spiderman.png);
+    /* background-image: url(../../images/spiderman.png); */
     background-repeat: no-repeat;
     background-position: center center;
     flex: 0 1 50%;
@@ -31,15 +31,16 @@
   
   .formBoxLeftForget {
     min-height: 500px;
-    background-image: url(../../images/deadpool.png);
+    /* background-image: url(../../images/deadpool.png); */
     background-repeat: no-repeat;
     background-position: center center;
     flex: 0 1 50%;
   }
   
   .formBoxRight {
-    flex: 0 1 50%;
+    /* flex: 0 1 50%; */
     /* border: 2px solid var(--white-color); */
+    margin: 7em auto;
   }
   
   .formBoxRight span {
@@ -109,7 +110,7 @@
   /* Form buttons */
 
   
-  .formContent button {
+  /* .formContent button {
     margin-left: 0;
     display: block;
     margin: 0 auto 20px;
@@ -136,7 +137,7 @@
     color: grey;
     opacity: 0.65;
     cursor: not-allowed;
-  }
+  } */
   
   .linkContainer {
     height: 50px;
