@@ -25,7 +25,6 @@ const Login = (props) => {
         e.preventDefault();
         firebasProvider.LoginUser(email, password)
         .then(user => {
-            console.log(user);
             setEmail('');
             setPassword('');
             props.history.push('/welcom')

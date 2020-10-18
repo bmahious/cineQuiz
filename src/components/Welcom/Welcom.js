@@ -7,16 +7,33 @@ import './Welcom.css';
 const Welcom = props => {
 
     const firebasePro = useContext(FirebaseContext);
+
     const [userSession, setUserSession] = useState(null);
+    const [userData, setUserData] = useState({});
 
     useEffect(() => {
         let listener = firebasePro.auth.onAuthStateChanged(user => {
             user ? setUserSession(user) : props.history.push('/')
-        });
+        })
+
+        if (!!userSession) {
+            firebasePro.user(userSession.uid)
+            .get()
+            .then( doc => {
+                if (doc && doc.exists) {
+                    const myData = doc.data();
+                    setUserData(myData)
+                }
+            })
+            .catch( error => {
+                console.log(error )
+            })
+        }
+        
         return () => {
             listener();
-        }
-    }, [])
+        };
+    }, [userSession])
 
         return userSession === null ? (
             <Fragment>
@@ -24,10 +41,11 @@ const Welcom = props => {
                 <p className="loaderText">Loading ... </p>
             </Fragment>
             ) : (
-            <div className="quiz-bg">
+                <div className="quiz-bg">
                     <div className="container">
                         <LogOut />
-                        <Quiz />
+                        <Quiz userData={userData}/>
+                        
                     </div>
                 </div>
         );
