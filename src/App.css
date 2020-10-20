@@ -85,8 +85,9 @@ main {
 .toastify-color-welcome {
   color: var(--black-color);
 }
-.toastify-color {
-  color: var(--white-color);
+.toastfy-color {
+  font-weight: bolder;
+  text-align: center;
 }
 /* END TOASTIFY COLOR */
 

@@ -6,7 +6,7 @@ const QuizQuestions = [
             debutant: [
                 {
                     id: 0,
-                    question: "Qui est l'acteur principal du film 'Le plan parfait' ?",
+                    question: "Qui a incarné le rôle principal du film 'Le Radin' ?",
                     options: [
                         "Jean Dujardin",
                         "Dany Boon",
@@ -18,110 +18,110 @@ const QuizQuestions = [
                 },
                 {
                     id: 1,
-                    question: "Dans les X-Men, quelle substance constitue le squelette de Wolverine ?",
+                    question: "Laquelle de ces séries est française ?",
                     options: [
-                        "Cavorite",
-                        "Vibranium",
-                        "Adamantium",
-                        "Neutronium"
+                        "Family Business",
+                        "Lost in Space",
+                        "La Liste Noire",
+                        "The Family"
                     ],
-                    answer: "Adamantium",
+                    answer: "Family Business",
                     heroId: 1009718
                 },
                 {
                     id: 2,
-                    question: "Quel est le nom de Spider-Man, apparu pour la première fois en 1962 ?",
+                    question: "Quelle est l’actrice qui a incarnée le rôle principal avec Dany Boon dans le film ‘Le plan parfait’ ?",
                     options: [
-                        "Tom Parker",
-                        "John Parker",
-                        "Peter Parker",
-                        "Alan Parker"
+                        "Laurence Arné",
+                        "Virginie Efira",
+                        "Marion Cottillard",
+                        "Diane Kruger"
                     ],
-                    answer: "Peter Parker",
+                    answer: "Diane Kruger",
                     heroId: 1009610
                 },
                 {
                     id: 3,
-                    question: "Comment s'appelait Wolverine quand il était cavalier d'Apocalypse?",
+                    question: "Dans quel film peut-on voir la chanteuse ‘Louane’ incarner le rôle principal ?",
                     options: [
-                        "Rage",
-                        "Death",
-                        "Destruction",
-                        "Oblivion"
+                        "La vie d’Adèle",
+                        "La famille Bélier",
+                        "La belle époque",
+                        "Le fabuleux destin d’Amélie"
                     ],
-                    answer: "Death",
+                    answer: "La famille Bélier",
                     heroId: 1009718
                 },
                 {
                     id: 4,
-                    question: "Quel super-héros ne se sépare jamais de son marteau forgé par les nains ?",
+                    question: "Comment s’appelle le réalisateur de la série ‘Dix pour cents’ ?",
                     options: [
-                        "Bizarro",
-                        "Flash",
-                        "Venom",
-                        "Thor"
+                        "Cédric Klapisch",
+                        "Bertrand Tavernier",
+                        "Jean-Pierre Jeunet",
+                        "Luc Besson"
                     ],
-                    answer: "Thor",
+                    answer: "Cédric Klapisch",
                     heroId: 1009664
                 },
                 {
                     id: 5,
-                    question: "Quelle couleur est associée à Hulk ?",
+                    question: "Dans quel de ces films Catherine Deneuve ne joue-t-elle pas ?",
                     options: [
-                        "Le jaune",
-                        "Le rouge",
-                        "Le vert",
-                        "Le bleu"
+                        "Huit femme",
+                        "Place Vandôme",
+                        "Les amants du pont neuf",
+                        "Belle maman"
                     ],
-                    answer: "Le vert",
+                    answer: "Les amants du pont neuf",
                     heroId: 1009351
                 },
                 {
                     id: 6,
-                    question: "Quel super-héros ressemble à un être de pierre ?",
+                    question: "Quelle est l’actrice qui a jouée un rôle à la fois dans la série ‘Family Business’ et ‘Dix pour cents’ ?",
                     options: [
-                        "Plastic Man",
-                        "The Thing",
-                        "Hawkman",
-                        "Superboy"
+                        "Julia Piaton",
+                        "Camille Cottin",
+                        "Julia Piaton",
+                        "Liliane Rovère"
                     ],
-                    answer: "The Thing",
+                    answer: "Liliane Rovère",
                     heroId: 1009662
                 },
                 {
                     id: 7,
-                    question: "De qui Edwin Jarvis est-il le majordome?",
+                    question: "Comment s'appelle le personnage interprété par Jonathan Cohen dans la série des 'Family Business' ?",
                     options: [
-                        "Bruce Wayne",
-                        "Charles Xavier",
-                        "Tony Stark",
-                        "Henry Steven"
+                        "Gérard",
+                        "Charles",
+                        "Joseph",
+                        "Olivier"
                     ],
-                    answer: "Tony Stark",
+                    answer: "Joseph ",
                     heroId: 1009368
                 },
                 {
                     id: 8,
-                    question: "Quel super-héros porte un costume inspiré du drapeau américain ?",
+                    question: "Quel acteur emblématique a joué dans les films 'Le Grand blond', 'Dupont Lajoie' ou encore ‘Les Fugitifs’ ?",
                     options: [
-                        "Tigra",
-                        "Blade",
-                        "Iron Man",
-                        "Captain America"
+                        "Pierre Richard ",
+                        "Jean Carmet",
+                        "François Cluzet",
+                        "Luc Besson"
                     ],
-                    answer: "Captain America",
+                    answer: "Jean Carmet",
                     heroId: 1009220
                 },
                 {
                     id: 9,
-                    question: "Y compris ses pouces, combien de doigts sur les deux mains possède The Thing?",
+                    question: "Qui est l’acteur qui a réalisé le film ‘les petits mouchoirs’ ?",
                     options: [
-                        8,
-                        6,
-                        10,
-                        4
+                        "Dany Boon",
+                        "Guillaume Canet",
+                        "François Cluzet",
+                        "Gérard Depardieu"
                     ],
-                    answer: 8,
+                    answer: "Guillaume Canet",
                     heroId: 1009662
                 }
             ],
