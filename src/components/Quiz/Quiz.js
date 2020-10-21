@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Levels from './../Levels/Levels';
 import ProgressBar from './../ProgressBar/ProgressBar';
@@ -30,7 +30,7 @@ class Quiz extends Component {
     loadQuestions = level => {
         const {maxQuestions} = this.state
         const fechedArrayQuiz =  QuizQuestions[0].quizz[level]
-            if (fechedArrayQuiz.length >= maxQuestions) {
+            if (fechedArrayQuiz.length >= maxQuestions -1) {
                 this.storedDataRef.current = fechedArrayQuiz;
                 // Here we isolate the answer and keep the rest i.e question & options ... except the answer so we'll not expose the answer 
                 const newArray = fechedArrayQuiz.map(({answer, ...keepRest}) => keepRest)
@@ -45,7 +45,7 @@ class Quiz extends Component {
     nextQuestion = () => {
         const {maxQuestions, idQuestion, userAnswer} = this.state
 
-        if (idQuestion === maxQuestions) {
+        if (idQuestion === maxQuestions -1) {
             this.gameOver();
         } else {
             this.setState(prevState => ({
@@ -152,18 +152,17 @@ class Quiz extends Component {
                 <p key={index} className={`answerOptions ${userAnswer === option ? "selected" : null}`} onClick={() => this.submitAnswer(option)}>{option}</p>
                 )
         })
-        return this.state.quizEnd ? (
-            <QuizOver />
-        ) : (
-            <Fragment>
-                {/* <h1> Bonjour {pseudo}  </h1> */}
-                <Levels />
-                <ProgressBar />
-                <h2>{question}</h2>
-                    { optionsDisplay }
-                <button disabled={btnDisabled} className="btnSubmit" onClick={this.nextQuestion}>Suivant</button>
-            </Fragment>
-            );
+            return this.state.quizEnd ? (
+                <QuizOver />
+            ) : (
+                <Fragment>
+                    <Levels />
+                    <ProgressBar />
+                    <h2>{question}</h2>
+                        { optionsDisplay }
+                    <button disabled={btnDisabled} className="btnSubmit" onClick={this.nextQuestion}>Suivant</button>
+                </Fragment>
+             );
        
     }
 }
