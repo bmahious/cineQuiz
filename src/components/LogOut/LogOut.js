@@ -7,7 +7,6 @@ const LogOut = props => {
     const FirebaseProv = useContext(FirebaseContext);
     
     const [checked, setChecked] = useState(false); 
-    console.log(checked)
 
     const handleChange = event => {
         setChecked(event.target.checked);

@@ -144,7 +144,7 @@ class Quiz extends Component {
 
     render() {
 
-        const {options, userAnswer, question, btnDisabled} = this.state
+        const {options, userAnswer, question, btnDisabled, idQuestion, maxQuestions} = this.state
         // const { pseudo } = this.props.userData
         const optionsDisplay = options.map((option, index) => {
             return(
@@ -152,15 +152,17 @@ class Quiz extends Component {
                 <p key={index} className={`answerOptions ${userAnswer === option ? "selected" : null}`} onClick={() => this.submitAnswer(option)}>{option}</p>
                 )
         })
-            return this.state.quizEnd ? (
-                <QuizOver />
+            return !this.state.quizEnd ? (
+                <QuizOver ref={this.storedDataRef} toto="toto"/>
             ) : (
                 <Fragment>
                     <Levels />
-                    <ProgressBar />
+                    <ProgressBar idQuestion={idQuestion} maxQuestions={maxQuestions}/>
                     <h2>{question}</h2>
                         { optionsDisplay }
-                    <button disabled={btnDisabled} className="btnSubmit" onClick={this.nextQuestion}>Suivant</button>
+                    <button disabled={btnDisabled} className="btnSubmit" onClick={this.nextQuestion}>
+                        {idQuestion < maxQuestions-1 ? "Suivant" : "Terminer"}
+                    </button>
                 </Fragment>
              );
        

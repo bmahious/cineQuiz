@@ -97,7 +97,7 @@ const QuizQuestions = [
                         "Joseph",
                         "Olivier"
                     ],
-                    answer: "Joseph ",
+                    answer: "Joseph",
                     heroId: 1009368
                 },
                 {
@@ -123,7 +123,7 @@ const QuizQuestions = [
                     ],
                     answer: "Guillaume Canet",
                     heroId: 1009662
-                }
+                },
             ],
             "confirme": [
                 {
