@@ -8,23 +8,32 @@ import QuizOver from './../QuizOver/QuizOver';
 toast.configure();
 
 class Quiz extends Component {
+    constructor(props) {
+        super(props)
 
-    state = {
-        levelsNames : ['debutant', 'confirme','expert'],
-        quizLevel: 0,
-        maxQuestions: 10,
-        storedQuestions: [],
-        question: null,
-        options: [],
-        idQuestion: 0,
-        btnDisabled: true,
-        userAnswer: null,
-        score: 0,
-        welcomMsg: false,
-        quizEnd: false
-    }
+        this.initialState = {
+            levelsNames : ['debutant', 'confirme','expert'],
+            quizLevel: 0,
+            maxQuestions: 10,
+            storedQuestions: [],
+            question: null,
+            options: [],
+            idQuestion: 0,
+            btnDisabled: true,
+            userAnswer: null,
+            score: 0,
+            welcomMsg: false,
+            quizEnd: false
+        }
     
-     storedDataRef = React.createRef();
+        this.state = this.initialState;
+        this.storedDataRef = React.createRef();
+    }
+    // we can put storedDataRef as follow without 'this' outside the constructor
+    //storedDataRef = React.createRef();
+    
+    
+     
 
     // Here we've got our answer on CDM i.e Débutant and we pass it as level
     loadQuestions = level => {
@@ -149,9 +158,14 @@ class Quiz extends Component {
             this.setState({
                 percent: gradePercent,
                 quizEnd: true
-            })
+            }) 
         }
     }
+    loadLevelQuestions = param => {
+        //we import all the states with spread operator & we'll modify only quizLevel 
+        this.setState({...this.initialState, quizLevel: param})
+        this.loadQuestions(this.state.levelsNames[param])
+     }
 
     render() {
 
@@ -171,6 +185,7 @@ class Quiz extends Component {
                 maxQuestions={this.state.maxQuestions}
                 quizLevel={this.state.quizLevel}
                 percent={this.state.percent}
+                loadLevelQuestions={this.loadLevelQuestions}
                 />
             ) : (
                 <Fragment>
