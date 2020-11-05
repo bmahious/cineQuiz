@@ -1,4 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react';
+import Modal from '../Modal/Modal';
+import { GiTrophyCup } from 'react-icons/gi';
+
 
 
 const QuizOver = React.forwardRef((props, ref) => {
@@ -6,12 +9,20 @@ const QuizOver = React.forwardRef((props, ref) => {
     const {levelsNames, score, maxQuestions, quizLevel, percent, loadLevelQuestions} = props 
 
     const [asked, setAsked] = useState([])
+    const [openModal, setPpenModal] = useState(false)
+
     console.log(asked)
     useEffect(() => {
         setAsked(ref.current)
     }, [ref]);
 
-    
+    const showModal = id => {
+        setPpenModal(true); 
+    }
+
+    const hideModal = () => { 
+        setPpenModal(false); 
+    }
 
     const averageGrade = maxQuestions / 2;
 
@@ -32,7 +43,7 @@ const QuizOver = React.forwardRef((props, ref) => {
                         </Fragment>
                     ) : (
                         <Fragment>
-                            <p className="successMsg"> Bravo vous êtes un expert ! </p>
+                            <p className="successMsg"> <GiTrophyCup/>  Bravo vous êtes un expert ! </p>
                             <button className="btnResult success" onClick={() => loadLevelQuestions(0)}>Retour à l'accueil </button>
                             <button className="btnResult gameOver"></button>
                         </Fragment>
@@ -62,7 +73,7 @@ const QuizOver = React.forwardRef((props, ref) => {
                 <tr key={question.id}>
                     <td>{question.question}</td>
                     <td>{question.answer}</td>
-                    <td> <button className="btnInfo"> Info </button> </td>
+                    <td> <button className="btnInfo" onClick={() => showModal(question.heroId)}> Info </button> </td>
                 </tr>
             )
         })
@@ -93,6 +104,17 @@ const QuizOver = React.forwardRef((props, ref) => {
                     </tbody>
                 </table>
             </div>
+            <Modal showModal={openModal} hideModal={hideModal}> 
+                <div className="modalHeader">
+                    <h2>Titre</h2>
+                </div>
+                <div className="modalBody">
+                    <h3>Titre 2</h3>
+                </div>
+                <div className="modalFooter">
+                    <button className="modalBtn">Fermer</button>
+                </div>
+            </Modal>
         </Fragment>
         
     )

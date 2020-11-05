@@ -5,6 +5,7 @@ import Levels from './../Levels/Levels';
 import ProgressBar from './../ProgressBar/ProgressBar';
 import QuizQuestions from './../QuizQuestions/QuizQuestions';
 import QuizOver from './../QuizOver/QuizOver';
+import { FaChevronRight } from 'react-icons/fa';
 toast.configure();
 
 class Quiz extends Component {
@@ -23,7 +24,8 @@ class Quiz extends Component {
             userAnswer: null,
             score: 0,
             welcomMsg: false,
-            quizEnd: false
+            quizEnd: false,
+            percent: null
         }
     
         this.state = this.initialState;
@@ -32,9 +34,6 @@ class Quiz extends Component {
     // we can put storedDataRef as follow without 'this' outside the constructor
     //storedDataRef = React.createRef();
     
-    
-     
-
     // Here we've got our answer on CDM i.e Débutant and we pass it as level
     loadQuestions = level => {
         const {maxQuestions} = this.state
@@ -46,8 +45,6 @@ class Quiz extends Component {
                 this.setState({
                     storedQuestions: newArray
                 })
-            }else {
-                console.log('pas assez de questions !!!')
             }
     }
 
@@ -56,14 +53,11 @@ class Quiz extends Component {
 
         if (idQuestion === maxQuestions -1) {
             //this.gameOver();
-            this.setState({
-                quizEnd: true
-            })
+            this.setState({quizEnd: true})
         } else {
-            this.setState(prevState => ({
-                idQuestion: prevState.idQuestion + 1
-            }))
+            this.setState(prevState => ({idQuestion: prevState.idQuestion + 1}))
         }
+
         // Incrémentation du score 
         const goodAnswer = this.storedDataRef.current[idQuestion].answer
         if (userAnswer === goodAnswer) {
@@ -109,8 +103,7 @@ class Quiz extends Component {
                 draggable: true,
                 progress: undefined,
             });
-        }
-        
+        }  
     }
 
     componentDidMount() {
@@ -156,8 +149,6 @@ class Quiz extends Component {
     getPercentage  = (maxQues, ourScore) => (ourScore / this.state.maxQuestions) *100
 
     gameOver = percent => {
-      
-       
         if (percent >= 50) {
             this.setState({
                 quizLevel: this.state.quizLevel +1,
@@ -176,27 +167,28 @@ class Quiz extends Component {
 
     render() {
 
-        const {options, userAnswer, question, btnDisabled, idQuestion, maxQuestions} = this.state
+        const {options, userAnswer, question, btnDisabled, idQuestion, maxQuestions, levelsNames,
+            score, quizLevel, percent } = this.state
         
         const optionsDisplay = options.map((option, index) => {
             return(
                 // we'll pass the string that we'll get on option in this.submitAnswer(option)
-                <p key={index} className={`answerOptions ${userAnswer === option ? "selected" : null}`} onClick={() => this.submitAnswer(option)}>{option}</p>
+                <p key={index} className={`answerOptions ${userAnswer === option ? "selected" : null}`} onClick={() => this.submitAnswer(option)}> <FaChevronRight/> {option}</p>
                 )
         })
             return this.state.quizEnd ? (
                 <QuizOver 
                 ref={this.storedDataRef} 
-                levelsNames={this.state.levelsNames}
-                score={this.state.score }
-                maxQuestions={this.state.maxQuestions}
-                quizLevel={this.state.quizLevel}
-                percent={this.state.percent}
+                levelsNames={levelsNames}
+                score={score }
+                maxQuestions={maxQuestions}
+                quizLevel={quizLevel}
+                percent={percent}
                 loadLevelQuestions={this.loadLevelQuestions}
                 />
             ) : (
                 <Fragment>
-                    <Levels levelsNames={this.state.levelsNames} quizLevel={this.state.quizLevel} />
+                    <Levels levelsNames={levelsNames} quizLevel={quizLevel} />
                     <ProgressBar idQuestion={idQuestion} maxQuestions={maxQuestions}/>
                     <h2>{question}</h2>
                         { optionsDisplay }
@@ -205,7 +197,6 @@ class Quiz extends Component {
                     </button>
                 </Fragment>
              );
-       
     }
 }
 
